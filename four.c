@@ -32,19 +32,19 @@ int four_Menu()
 {
 	int iSelect;
 	printLine(25);
-	printf("\n1. ÔËĞĞº¯Êı test1_1");
-	printf("\n2. ÔËĞĞº¯Êı test1_2");
-	printf("\n3. ÔËĞĞº¯Êı test2_1");
-	printf("\n4. ÔËĞĞº¯Êı test2_2");
-	printf("\n5. ÔËĞĞº¯Êı Feb_day");
-	printf("\n6. ÔËĞĞº¯Êı Tax");
-	printf("\n7. ÔËĞĞº¯Êı Func");
-	printf("\n8. ÔËĞĞº¯Êı Triangle");
-	printf("\n9. ÔËĞĞº¯Êı MathLearn");
-	printf("\n0. ÍË³ö");
+	printf("\n1. è¿è¡Œå‡½æ•° test1_1");
+	printf("\n2. è¿è¡Œå‡½æ•° test1_2");
+	printf("\n3. è¿è¡Œå‡½æ•° test2_1");
+	printf("\n4. è¿è¡Œå‡½æ•° test2_2");
+	printf("\n5. è¿è¡Œå‡½æ•° Feb_day");
+	printf("\n6. è¿è¡Œå‡½æ•° Tax");
+	printf("\n7. è¿è¡Œå‡½æ•° Func");
+	printf("\n8. è¿è¡Œå‡½æ•° Triangle");
+	printf("\n9. è¿è¡Œå‡½æ•° MathLearn");
+	printf("\n0. é€€å‡º");
 	printLine(25);
 
-	printf("\n\nÇëÊäÈëÄãµÄÑ¡Ïî£º");
+	printf("\n\nè¯·è¾“å…¥ä½ çš„é€‰é¡¹ï¼š");
 	scanf("%d", &iSelect);
 	return iSelect;
 }
@@ -73,7 +73,7 @@ void four_test1_1()
 {
 	int i, j;
 	i = j = 2; // i = 2 j = 2;
-	if (i == 1)  // False  ¸Ãº¯ÊıÎŞÊä³ö½á¹û
+	if (i == 1)  // False  è¯¥å‡½æ•°æ— è¾“å‡ºç»“æœ
 	{
 		if (j == 2)
 		{
@@ -95,7 +95,7 @@ void four_test1_2()
 	{
 	case 1:
 	case 2: printf("x<3\n");
-	case 3: printf("x = 3\n");  // ¸ÃÌõ¼ş·ûºÏºó, ÒòÎªÃ»ÓĞbreak£¬ËùÒÔÖ´ĞĞcase 3: Ö®ºóËùÒÔÓï¾ä¡£
+	case 3: printf("x = 3\n");  // è¯¥æ¡ä»¶ç¬¦åˆå, å› ä¸ºæ²¡æœ‰breakï¼Œæ‰€ä»¥æ‰§è¡Œcase 3: ä¹‹åæ‰€ä»¥è¯­å¥ã€‚
 	case 4:
 	case 5: printf("x > 3\n");
 	default: printf("x is unknown.\n");
@@ -158,7 +158,7 @@ void four_test2_2()
 void Feb_days()
 {
 	int days, year;
-	printf("ÇëÊäÈëÄê·İ:");
+	printf("è¯·è¾“å…¥å¹´ä»½:");
 	scanf("%d", &year);
 	if (year % 4 == 0 && year % 100 != 0)
 	{
@@ -172,13 +172,13 @@ void Feb_days()
 			days = 28;
 		}
 	}
-	printf("%d Äê¶şÔÂÓĞ %d Ìì\n", year,days);
+	printf("%d å¹´äºŒæœˆæœ‰ %d å¤©\n", year,days);
 }
 
 void Tax()
 {
 	double tax, bonus, rate,profit;
-	printf("ÇëÊäÈë½±½ğbonus£º");
+	printf("è¯·è¾“å…¥å¥–é‡‘bonusï¼š");
 	scanf("%lf", &bonus);
 	if (bonus < 500) {
 		rate = 0;
@@ -197,13 +197,13 @@ void Tax()
 	}
 	tax = bonus * rate;
 	profit = bonus - rate;
-	printf("ÊµµÃ½±½ğÊı£º%.2lf\n", profit);
+	printf("å®å¾—å¥–é‡‘æ•°ï¼š%.2lf\n", profit);
 }
 
 void Func()
 {
 	double x, y;
-	printf("ÇëÊäÈëx:");
+	printf("è¯·è¾“å…¥x:");
 	scanf("%lf", &x);
 	if (x > 0) {
 		y = pow(_e, -x);
@@ -214,32 +214,32 @@ void Func()
 	else {
 		y = -pow(_e, x);
 	}
-	printf("º¯ÊıÖµ y = %lf\n", y);
+	printf("å‡½æ•°å€¼ y = %lf\n", y);
 }
 
 
 void Triangle()
 {
 	int a, b, c;
-	printf("ÅĞ¶ÏÈı½ÇĞÎÀàĞÍ\n");
-	printf("ÇëÊäÈëÈıÌõ±ß³¤:");
+	printf("åˆ¤æ–­ä¸‰è§’å½¢ç±»å‹\n");
+	printf("è¯·è¾“å…¥ä¸‰æ¡è¾¹é•¿:");
 	scanf("%d,%d,%d", &a, &b, &c);
 	if (a + b > c && b + c > a && a + c > b) {
 		if (a == b && b == c) {
-			printf("¸ÃÈı½ÇĞÎÊÇµÈ±ßÈı½ÇĞÎ\n");
+			printf("è¯¥ä¸‰è§’å½¢æ˜¯ç­‰è¾¹ä¸‰è§’å½¢\n");
 		}
 		else if (a == b || a == c || b == c) {
-			printf("¸ÃÈı½ÇĞÎÊÇµÈÑüÈı½ÇĞÎ\n");
+			printf("è¯¥ä¸‰è§’å½¢æ˜¯ç­‰è…°ä¸‰è§’å½¢\n");
 		}
 		else if (a*a + b * b == c * c || a * a + c * c == b * b || b * b + c * c == a * a) {
-			printf("¸ÃÈı½ÇĞÎÊÇÖ±½ÇÈı½ÇĞÎ\n");
+			printf("è¯¥ä¸‰è§’å½¢æ˜¯ç›´è§’ä¸‰è§’å½¢\n");
 		}
 		else {
-			printf("¸ÃÈı½ÇĞÎÊÇÆÕÍ¨Èı½ÇĞÎ\n");
+			printf("è¯¥ä¸‰è§’å½¢æ˜¯æ™®é€šä¸‰è§’å½¢\n");
 		}
 	}
 	else {
-		printf("Èı±ß²»ÄÜ¹¹³ÉÈı½ÇĞÎ\n");
+		printf("ä¸‰è¾¹ä¸èƒ½æ„æˆä¸‰è§’å½¢\n");
 	}
 }
 
@@ -342,9 +342,9 @@ void MathLearn()
 	}
 	if (result == 1)
 	{
-		printf("ÕıÈ·\n");
+		printf("æ­£ç¡®\n");
 	}
 	else {
-		printf("´íÎó\n");
+		printf("é”™è¯¯\n");
 	}
 }
