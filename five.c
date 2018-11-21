@@ -4,7 +4,7 @@
 void StatisticsNum()
 {
 	int a, i, sum = 0, cnt = 0;
-	printf("ÇëÊäÈë10¸öÕûÊı£º");
+	printf("è¯·è¾“å…¥10ä¸ªæ•´æ•°ï¼š");
 	for (i = 1; i <= 10; i++)
 	{
 		scanf("%d", &a);
@@ -15,8 +15,8 @@ void StatisticsNum()
 			cnt += 1;
 		}
 	}
-	printf("Å¼Êı£º%2d¸ö\n",cnt);
-	printf("ÕıÊıºÍ£º%2d\n",sum);
+	printf("å¶æ•°ï¼š%2dä¸ª\n",cnt);
+	printf("æ­£æ•°å’Œï¼š%2d\n",sum);
 }
 
 void StatisticsChar()
@@ -33,8 +33,8 @@ void StatisticsChar()
 		}
 	}
 	cntChar += 1;
-	printf("×Ü×Ö·ûÊı£º%2d\n",cntChar);
-	printf("Ğ¡Ğ´×Ö·û£º%2d\n",cntSmall);
+	printf("æ€»å­—ç¬¦æ•°ï¼š%2d\n",cntChar);
+	printf("å°å†™å­—ç¬¦ï¼š%2d\n",cntSmall);
 }
 
 void Apple()
@@ -42,12 +42,12 @@ void Apple()
 	float total = 0;
 	int day = 2;
 	total = 0.8 * 2;
-	printf("µÚ1Ìì£º%2d¸öÆ»¹û£¬%.2fÔª\n", 2, 1.6);
+	printf("ç¬¬1å¤©ï¼š%2dä¸ªè‹¹æœï¼Œ%.2få…ƒ\n", 2, 1.6);
 	while (total < 100.0)
 	{
 
 		total = 0.8*(2 * day - 1);
-		printf("µÚ%2dÌì£º%2d¸öÆ»¹û£¬%.5fÔª\n", day, (2 * day - 1), total);
+		printf("ç¬¬%2då¤©ï¼š%2dä¸ªè‹¹æœï¼Œ%.5få…ƒ\n", day, (2 * day - 1), total);
 		day++;
 	}
 }
@@ -55,14 +55,14 @@ void Apple()
 void Count_e()
 {
 	int i = 2;
-	double result = 2;         //ÀÛ¼Óºó½á¹û£¬´Ó2¿ªÊ¼£»
-	double add = 1,before; // addÎªÔ­ÀÛ¼ÓÏî£¬beforeÎªÏÖÔÚÀÛ¼ÓÏî£»
+	double result = 2;         //ç´¯åŠ åç»“æœï¼Œä»2å¼€å§‹ï¼›
+	double add = 1,before; // addä¸ºåŸç´¯åŠ é¡¹ï¼Œbeforeä¸ºç°åœ¨ç´¯åŠ é¡¹ï¼›
 	while (1) {
 		before = add;
 		add = add / i;
 		result += add;
 		i++;
-		if (before - add <= 1.0e-5) {  // ÏÖÀÛ¼ÓÏîÓëÔ­ÀÛ¼ÓÏîÏà²î 10^-5; (¿ØÖÆ¾«¶È£©
+		if (before - add <= 1.0e-5) {  // ç°ç´¯åŠ é¡¹ä¸åŸç´¯åŠ é¡¹ç›¸å·® 10^-5; (æ§åˆ¶ç²¾åº¦ï¼‰
 			break;
 		}
 	}
@@ -155,16 +155,16 @@ void PerfectNum()
 	int i;
 	for (i = 1; i < count; i++)
 	{
-		printf("ÍêÊı%d + ", i);
+		printf("å®Œæ•°%d + ", i);
 	}
-	printf("ÍêÊı%d = %d\n", i, sum);
+	printf("å®Œæ•°%d = %d\n", i, sum);
 }
 
 void DaffodilNum()
 {
 	int a, b, c, num;
 
-	printf("\nË®ÏÉ»¨Êı£º\n");
+	printf("\næ°´ä»™èŠ±æ•°ï¼š\n");
 	for (num = 100; num <= 999; num++)
 	{
 		a = num / 100;
@@ -182,7 +182,7 @@ int setQuestion(int *pNum1, int *pNum2, int *pOp)
 	int num1, num2;
 	*pOp = rand() % 4 + 1;
 	int answer;
-	if (*pOp == 4) //³ı·¨
+	if (*pOp == 4) //é™¤æ³•
 	{
 		do{
 			num1 = rand() % 10 + 1;
@@ -217,19 +217,19 @@ int MathLearn()
 		case 1:putchar('+'); break;
 		case 2:putchar('-'); break;
 		case 3:putchar('x'); break;
-		case 4:printf("¡Â"); break;
+		case 4:printf("Ã·"); break;
 		}
 		printf(" %d = \n",num2);
 		for (j = 1; j <= 3; j++)
 		{
-			printf("\nµÚ%d´Î»ú»á:", j);
+			printf("\nç¬¬%dæ¬¡æœºä¼š:", j);
 			scanf("%d", &answer);
 			if (answer == result) {
-				printf("\nÕıÈ·\n");
+				printf("\næ­£ç¡®\n");
 				break;
 			}
 			else {
-				printf("\n´íÎó\n");
+				printf("\né”™è¯¯\n");
 			}
 		}
 		if (j == 4) {
@@ -239,10 +239,10 @@ int MathLearn()
 	cntRight = 10 - cntRight;
 	if (cntWrong == 0)
 	{
-		printf("¹§Ï²Äã£¬È«¶Ô£¡\n");
+		printf("æ­å–œä½ ï¼Œå…¨å¯¹ï¼\n");
 	}
 	else {
-		printf("Ê®µÀÌâÄ¿Äã´ğ¶ÔÁË%dµÀ£¬´ğ´í%dµÀ\n",cntRight,cntWrong);
+		printf("åé“é¢˜ç›®ä½ ç­”å¯¹äº†%dé“ï¼Œç­”é”™%dé“\n",cntRight,cntWrong);
 	}
 }
 
@@ -254,12 +254,12 @@ void GetBall()
 		for (red = 0; red <= 3; red++) {
 			white = 8 - red - black;
 			if (white <= 3 && white >= 0) {
-				printf("\nÈ¡ºìÇò%d¿Å£¬°×Çò%d¿Å£¬ºÚÇò%d¿Å\n", red, white, black);
+				printf("\nå–çº¢çƒ%dé¢—ï¼Œç™½çƒ%dé¢—ï¼Œé»‘çƒ%dé¢—\n", red, white, black);
 				count += 1;
 			}
 		}
 	}
-	printf("\nÒ»¹²%dÖÖÈ¡·¨\n", count);
+	printf("\nä¸€å…±%dç§å–æ³•\n", count);
 }
 
 int main(void)
